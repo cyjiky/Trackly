@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5e0e2;
+    color: #4a3b3d;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+nav, footer {
+    background-color: #ffb6c1;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+
+nav {
+  border-bottom: 4px solid #f895a4;
+  box-shadow: 0 4px 15px rgba(248, 149, 164, 0.25);
+}
+
+.container {
+    width: 60%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    flex: 1;
+    
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+    0 15px 35px rgba(180, 115, 125, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .custom-button {
+    background-color: #ffb6c1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 5px;
+    border-color: #f895a4; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .custom-button:hover {
+    background-color: #f895a4;
+}
+
+.container li {
+    padding: 20px;
+    cursor: pointer;
+}
+
+footer {
+  margin-top: auto;
+  border-top: 4px solid #f895a4;
+  box-shadow: 0 -4px 15px rgba(248, 149, 164, 0.25);
+}
