@@ -7,8 +7,5 @@ class TaskBase(BaseModel):
 class Task(TaskBase):
     id: int 
 
-    class Config: 
-        orm_mode = True
-
 class TaskCreate(TaskBase):
     pass 

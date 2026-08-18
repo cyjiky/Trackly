@@ -44,31 +44,17 @@ nav {
     0 5px 15px rgba(0, 0, 0, 0.04);
 }
 
-.container p {
-    font-size: 20px;
+.container-head {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.container .title {
+    font-size: 32px;
     font-weight: bold;
-}
-
-.container .custom-button {
-    background-color: #ffb6c1;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    /* border: 5px;
-    border-color: #f895a4; */
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.container .custom-button:hover {
-    background-color: #f895a4;
-}
-
-.container li {
-    padding: 20px;
-    cursor: pointer;
 }
 
 footer {
