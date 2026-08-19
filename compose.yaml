@@ -1,0 +1,20 @@
+services:
+  backend:
+    image: bckd/trackly
+    container_name: trackly-backend 
+    build: 
+      context: ./backend
+      dockerfile: Containerfile
+    ports:
+       - "8000:8000"
+
+  frontend:
+    image: front/trackly
+    container_name: trackly-frontend 
+    build:
+      context: ./frontend 
+      dockerfile: Containerfile
+    ports:
+      - "5173:80"
+    environment:
+      - BACKEND_URL=http://127.0.0.1:8000
