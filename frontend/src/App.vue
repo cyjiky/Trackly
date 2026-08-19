@@ -10,6 +10,7 @@
       v-for="task in tasks"
       :key="task.id"
       :tasks="task"
+      @delete-task="deleteTaskfetch"
     />
     
     <ModalCard :showing="isModal" @close="isModal = false" @create-task="postTaskFetch"/>
@@ -74,6 +75,22 @@ export default {
         this.tasks.push(createdTask)
           
       } catch (error) {
+        console.log(newData)
+        console.error(error);
+      }
+    },
+    async deleteTaskfetch(path = 'http://127.0.0.1:8000/task') {
+      try{
+        const response = await 
+        fetch(path, {
+          method: 'DELETE'
+        });
+
+        if (response.ok) {
+          console.log('Post deleted successfully.');
+        }
+
+      } catch (error){
         console.log(newData)
         console.error(error);
       }

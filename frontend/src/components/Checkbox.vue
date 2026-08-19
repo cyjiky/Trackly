@@ -4,15 +4,16 @@
         <label className="check-container"> 
             <p> {{ tasks.title }} </p>
             <p v-if="tasks.description != 'str'" className="text-description"> -> {{ tasks.description }}</p>
-            <input type="checkbox" checked="checked">   
+            <input type="checkbox">   
             <span className="checkmark"></span>
+            <button @click="$emit('delete-task')">Delete</button>
         </label>
     </div>
     
 </template>
 
 
-<script type="application/javascript">
+<script>
 export default {
     name: 'Tasks', 
     props: {
@@ -20,7 +21,8 @@ export default {
             type: Object, 
             required: true,
         }
-    }
+    },
+    emits: ['delete-task']
 };
 </script>
 
@@ -104,6 +106,23 @@ export default {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+button {
+  color: #fff;
+  width: 60px;
+  height: 25px;
+  background-color: #f895a4;
+  padding: auto;
+  border: 0;
+  border-radius: 3px;
+}
+
+button:hover {
+  color:#222;
+  background-color: white;
+  border: 2px;
+  border-color: #ccc;
 }
 
 </style>
