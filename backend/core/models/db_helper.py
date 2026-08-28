@@ -41,8 +41,6 @@ class DatabaseHelper:
             yield session
             await session.close()
 
-    async def new_func(self):
-        pass 
 
 db_helper = DatabaseHelper(
     url=str(settings.db.url), 

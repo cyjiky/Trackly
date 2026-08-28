@@ -14,8 +14,8 @@ async def lifespan(app: FastAPI):
     # startup 
 
     # testing
-    async with db_helper.engine.begin() as connection:
-        await connection.run_sync(Base.metadata.create_all)
+    # async with db_helper.engine.begin() as connection:
+    #     await connection.run_sync(Base.metadata.create_all)
     yield 
 
     # shutdown 

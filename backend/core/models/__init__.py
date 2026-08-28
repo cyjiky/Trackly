@@ -3,6 +3,7 @@ __all__ = (
     "Base",
     "User",
     "Task",
+    'Profile'
 )
 
 from .db_helper import db_helper
@@ -10,3 +11,4 @@ from .base import Base
 
 from .user import User
 from .task import Task 
+from .profile import Profile
