@@ -1,8 +1,8 @@
 from typing import List
 from sqlalchemy import String, ForeignKey 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from .base import Base 
 
+from .base import Base 
 from .mixins import UserRelationMixin
 
 class Task(UserRelationMixin, Base):
